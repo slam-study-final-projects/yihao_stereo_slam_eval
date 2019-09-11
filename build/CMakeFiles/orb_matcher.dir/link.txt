@@ -1,0 +1,2 @@
+/usr/bin/ar qc liborb_matcher.a  CMakeFiles/orb_matcher.dir/orb_matcher.cc.o
+/usr/bin/ranlib liborb_matcher.a

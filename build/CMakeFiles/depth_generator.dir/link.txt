@@ -1,0 +1,2 @@
+/usr/bin/ar qc libdepth_generator.a  CMakeFiles/depth_generator.dir/depth_generator.cc.o
+/usr/bin/ranlib libdepth_generator.a

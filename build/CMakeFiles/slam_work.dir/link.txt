@@ -1,0 +1,2 @@
+/usr/bin/ar qc libslam_work.a  CMakeFiles/slam_work.dir/slam_work.cc.o
+/usr/bin/ranlib libslam_work.a

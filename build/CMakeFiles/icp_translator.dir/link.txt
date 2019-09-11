@@ -1,0 +1,2 @@
+/usr/bin/ar qc libicp_translator.a  CMakeFiles/icp_translator.dir/icp_translator.cc.o
+/usr/bin/ranlib libicp_translator.a
