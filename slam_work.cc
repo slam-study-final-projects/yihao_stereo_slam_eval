@@ -13,16 +13,27 @@ void SlamWork::SetParams(double fx, double fy, double cx, double cy, double d) {
 }
 
 void SlamWork::ComputePose() {
-
+  int total_num = 6;
   for (int i = 0; i < pose_number_; ++i) {
-    string left_path = input_path_ + "//image_0//00000" + to_string(i) + ".png";
+	string num_now = to_string(i);
+	string num_zeros = "";
+    for (int j = 0; j < total_num - num_now.length(); ++j){
+    	num_zeros += "0";
+    }
+    string num_merged = num_zeros + num_now;
+    string left_path = input_path_ + "//image_0//" + num_merged + ".png";
     string right_path =
-        input_path_ + "//image_1//00000" + to_string(i) + ".png";
-
+        input_path_ + "//image_1//" + num_merged + ".png";
+	num_now = to_string(i + 1);
+	num_zeros = "";
+    for (int j = 0; j < total_num - num_now.length(); ++j){
+    	num_zeros += "0";
+    }
+    num_merged = num_zeros + num_now;
     string left_path2 =
-        input_path_ + "//image_0//00000" + to_string(i + 1) + ".png";
+        input_path_ + "//image_0//" + num_merged + ".png";
     string right_path2 =
-        input_path_ + "//image_1//00000" + to_string(i + 1) + ".png";
+        input_path_ + "//image_1//" + num_merged + ".png";
 
     cv::Mat left_first = cv::imread(left_path, 0);
     cv::Mat right_first = cv::imread(right_path, 0);
